@@ -1,0 +1,18 @@
+.categoryImage{
+    transition: ease all 200ms;
+}
+
+.categoryImage:hover{
+    transform: scale(1.1);
+}
+
+.image{
+    width: 90px;
+    height: 90px;
+}
+
+.categoryImage > h2{
+    font-size: 15px;
+    color: black;
+    font-weight: 300;
+}

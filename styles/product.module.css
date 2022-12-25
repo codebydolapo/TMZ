@@ -1,0 +1,9 @@
+.productMain{
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, 0.6);
+    transition: all ease-in-out 500ms;
+
+}
+
+.productMain:hover{
+    transform: scale(105%);
+}

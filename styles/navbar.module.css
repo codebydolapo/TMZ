@@ -1,91 +1,124 @@
-.navBar {
-    box-shadow: 2px 5px 5px black;
+.navbarMain {
+  width: 100vw;
+  background: black;
+  height: 50px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  position: fixed;
+  z-index: 5;
+  top: 0;
 }
 
-.hamburger {
-    width: 0px;
-    height: 0px;
-    /* border: 1px solid white; */
+.navbarNameLogo {
+  height: 50px;
+  width: 50%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
 }
 
-.line {
-    width: 0%;
-    height: 0px;
-    background-color: white;
-    transition: all ease 500ms;
+.navbarLogo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.middleLine {
-    width: 0%;
-    height: 0px;
-    background-color: white;
-    transition: all ease 500ms;
+.navbarNameLogo {
+  font-size: 25px;
+  color: white;
 }
 
-#line1 {
-    transform: rotate(45deg);
-    transform-origin: left;
-    transition: all ease 500ms;
+.navbarNavigation {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid white; */
+  color: white;
 }
 
-#line2 {
-    opacity: 0;
-    transition: all ease 500ms;
-    /* display: none; */
+.navbarCart {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-right: 20px;
+  cursor: pointer;
 }
 
-#line3 {
-    transform: rotate(-45deg);
-    transform-origin: left;
-    transition: all ease 500ms;
+
+@media only screen and (max-width: 420px){
+
+  .navbarMain {
+  width: 100vw;
+  background: black;
+  height: 50px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: black;
+  position: fixed;
+  z-index: 5;
+  top: 0;
 }
 
-@media only screen and (max-width: 821px) {
-    .navBar {
-        box-shadow: none;
-    }
-
-    .hamburger {
-        width: 40px;
-        height: 40px;
-        /* border: 1px solid white; */
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-        flex-direction: column;
-        cursor: pointer;
-        transition: all ease 500ms;
-    }
-
-    .line {
-        width: 100%;
-        height: 3px;
-        background-color: white;
-        transition: all ease 500ms;
-    }
-
-    .middleLine {
-        width: 70%;
-        height: 3px;
-        background-color: white;
-        transition: all ease 500ms;
-    }
-
-    #line1 {
-        transform: rotate(45deg);
-        transform-origin: left;
-        transition: all ease 500ms;
-    }
-
-    #line2 {
-        opacity: 0;
-        transition: all ease 500ms;
-        /* display: none; */
-    }
-
-    #line3 {
-        transform: rotate(-45deg);
-        transform-origin: left;
-        transition: all ease 500ms;
-    }
+.navbarNameLogo {
+  height: 50px;
+  width: 60%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5px;
 }
+
+.navbarLogo {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.navbarNameLogo {
+  font-size: 20px;
+  color: white;
+}
+
+.navbarNavigation {
+  height: 100%;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid white; */
+  color: white;
+}
+
+.navbarCart {
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid white; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  /* padding-right: 20px; */
+  cursor: pointer;
+}
+
+
+
+}
+
