@@ -27,31 +27,33 @@ function CheckoutCard({image, title, availability, description, price, id}: Prop
   }
 
   return (
-    <div className={`max-w-[14rem] min-w-[14rem] max-h-[23rem] min-h-[23rem] rounded-lg mx-5 my-[auto] flex flex-col justify-between items-center py-2 ${styles.productMain}`} onClick = {combinedDispatches}>
+    <div className={`md:max-w-[15.5rem] md:min-w-[15.5rem] md:max-h-[25rem] md:min-h-[25rem] rounded-lg mx-auto my-4 flex flex-col justify-between items-center cursor-pointer xs:max-w-[45vw] xs:min-w-[45vw] xs:max-h-[90vw] xs:min-h-[90vw] ${styles.productMain}`} onClick = {combinedDispatches}>
       <img
         src={image ? image : "/images/imageError.webp"}
         alt=""
-        className={`w-full max-h-[14rem] min-h-[14rem] rounded-[inherit] rounded-b-none`}
+        className={`w-full md:max-h-[15.5rem] md:min-h-[15.5rem] rounded-[inherit] rounded-b-none xs:max-h-[45vw] xs:min-h-[45vw]`}
       />
-      <div className={`w-full min-h-[7.5rem] max-h-[7.5rem] flex flex-col justify-between items-center p-2`}>
-        <div className={`w-full max-h-1/2 min-h-1/2 overflow-hidden text-wrap`}>
-          <p className={`text-sm font-bold`}>
+      <div className={`w-full min-h-[10rem] max-h-[10rem] flex flex-col justify-between items-center p-2 `}>
+        <div className={`w-full max-h-[5rem] min-h-[5rem] overflow-hidden text-wrap`}>
+          <p className={`text-base capitalize font-bold my-1`}>
             {title ? truncateString(title, 20) : "No-Name"}
           </p>
           <p className={`text-xs overflow-hidden`}>{truncateString(description, 35)}</p>
         </div>
         {availability && (
-          <div className={`w-full h-[25%] flex flex-col items-center justify-center`}>
-            <p className={`text-xs w-[70%] h-full text-center rounded-lg text-white bg-[#27f11c] capitalize`}>available</p>
+          <div className={`w-full h-[2.5rem] flex flex-col items-center justify-center`}>
+            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#8f329d] capitalize`}>available</p>
           </div>
         )}
         {!availability && (
-          <div className={`w-full h-[25%] flex flex-col items-center justify-center`}>
-            <p className={`text-xs w-[70%] h-full text-center rounded-lg text-white bg-[#fd0d0d] capitalize`}>unavailable</p>
+          <div className={`w-full h-[2.5rem] flex flex-col items-center justify-center`}>
+            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#fd0d0d] capitalize`}>unavailable</p>
           </div>
         )}
-        <div className={`w-full h-[20%] flex items-center justify-around`}>
-          <p className={`text-base font-bold px-5`}>#{price ? price : "0000"}</p>
+        <div className={`w-full h-[2.5rem] flex items-center justify-center`}>
+          <p className={`text-base font-bold`}>Price:&nbsp;</p>
+          <p className={`text-base font-bold`}>{price ? price : + "0.000"}</p>
+          <img src = "/icons/ether.png" className = {`w-[1.5rem] h-[1.5rem]`}/>
         </div>
       </div>
     </div>

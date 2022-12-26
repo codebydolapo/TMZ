@@ -28,7 +28,7 @@ export const gadgets: Props[] = [
         name: "gadget3",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget3.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -36,7 +36,7 @@ export const gadgets: Props[] = [
         name: "gadget4",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget4.jpg",
-        price: "0.0234",
+        price: "0.04",
         index: 1,
         availability: true
     },
@@ -44,7 +44,7 @@ export const gadgets: Props[] = [
         name: "gadget5",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget5.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -52,7 +52,7 @@ export const gadgets: Props[] = [
         name: "gadget6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image:"/images/gadgets/gadget6.jpg",
-        price: "0.022",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -60,7 +60,7 @@ export const gadgets: Props[] = [
         name: "gadget7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget7.jpg",
-        price: "0.012",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -68,7 +68,7 @@ export const gadgets: Props[] = [
         name: "gadget8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget8.jpg",
-        price: "0.0145",
+        price: "0.05",
         index: 1,
         availability: true
     },
@@ -76,7 +76,7 @@ export const gadgets: Props[] = [
         name: "gadget9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget9.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -109,7 +109,7 @@ export const gadgets: Props[] = [
         name: "gadget3",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget3.jpg",
-        price: "0.023",
+        price: "0.03",
         index: 1,
         availability: true
     },
@@ -117,7 +117,7 @@ export const gadgets: Props[] = [
         name: "gadget4",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget4.jpg",
-        price: "0.0234",
+        price: "0.024",
         index: 1,
         availability: true
     },
@@ -125,7 +125,7 @@ export const gadgets: Props[] = [
         name: "gadget5",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget5.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -133,7 +133,7 @@ export const gadgets: Props[] = [
         name: "gadget6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image:"/images/gadgets/gadget6.jpg",
-        price: "0.022",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -141,7 +141,7 @@ export const gadgets: Props[] = [
         name: "gadget7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget7.jpg",
-        price: "0.012",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -149,7 +149,7 @@ export const gadgets: Props[] = [
         name: "gadget8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget8.jpg",
-        price: "0.0145",
+        price: "0.015",
         index: 1,
         availability: true
     },
@@ -157,7 +157,7 @@ export const gadgets: Props[] = [
         name: "gadget9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget9.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -190,7 +190,7 @@ export const gadgets: Props[] = [
         name: "gadget3",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget3.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -198,7 +198,7 @@ export const gadgets: Props[] = [
         name: "gadget4",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget4.jpg",
-        price: "0.0234",
+        price: "0.04",
         index: 1,
         availability: true
     },
@@ -206,7 +206,7 @@ export const gadgets: Props[] = [
         name: "gadget5",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget5.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -214,7 +214,7 @@ export const gadgets: Props[] = [
         name: "gadget6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image:"/images/gadgets/gadget6.jpg",
-        price: "0.022",
+        price: "0.02",
         index: 1,
         availability: true
     },
@@ -222,7 +222,7 @@ export const gadgets: Props[] = [
         name: "gadget7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget7.jpg",
-        price: "0.012",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -230,7 +230,7 @@ export const gadgets: Props[] = [
         name: "gadget8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget8.jpg",
-        price: "0.0145",
+        price: "0.05",
         index: 1,
         availability: true
     },
@@ -238,7 +238,7 @@ export const gadgets: Props[] = [
         name: "gadget9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/gadgets/gadget9.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: false
     },

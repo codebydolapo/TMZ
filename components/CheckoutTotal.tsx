@@ -1,6 +1,6 @@
 import styles from "../styles/checkouttotal.module.css";
 import { useSelector, useDispatch } from "react-redux";
-import { revealContainer, removeCheckout } from "./reducers/action";
+import { revealContainer, removeCheckout, clearCart, clearTotal, scrubCart } from "./reducers/action";
 import { link } from "fs";
 import { useState } from "react";
 
@@ -25,8 +25,12 @@ function CheckoutTotal() {
     dispatch(removeCheckout());
   }
 
-  function comingSoon() {
-    alert("So sorry, I haven't had the time to add this feature yet");
+  function clearBasket() {
+    dispatch(clearCart())
+    dispatch(clearTotal())
+    dispatch(scrubCart())
+    dispatch(revealContainer());
+    dispatch(removeCheckout());
   }
 
   //FUNCTION THAT COMPILES THE MESSAGE TO SEND ON WHATSAPP
@@ -48,16 +52,19 @@ function CheckoutTotal() {
   }
 
   return (
-    <div className={`w-[32rem] h-[20rem] flex items-start justify-between flex-col text-left rounded-lg px-5`}>
-      <h1 className={`text-5xl`}>Total: #{amount}</h1>
-      <div className={`h-[18rem] w-full flex flex-col items-center justify-cround`}>
-        <button className={`w-[60%] h-[2.5rem] rounded-lg bg=[#8f329d] ${styles.button1}`} onClick={comingSoon}>
-          Pay Online
+    <div className={`md:w-[32rem] md:h-[18rem] flex items-center justify-between flex-col text-left rounded-lg md:px-5 my-5 xs:w-[98vw] xs:h-[18rem] ${styles.checkoutTotal}`}>
+      <div className={`w-full h-[5rem] border-2 border-white flex justify-center items-center`}>
+        <h1 className={`md:text-5xl xs:text-3xl`}>Total: {Math.ceil(amount) / 100}</h1>
+        <img src="/icons/ether.png" className={`md:w-[3rem] md:h-[3rem] xs:w-[2.5rem] xs:h-[2.5rem]`} />
+      </div>
+      <div className={`h-[13rem] w-full flex flex-col items-center justify-around`}>
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#5f0e5c] xs:w-[95%] text-white ${styles.button1}`} onClick={clearBasket}>
+          Clear Cart
         </button>
-        <button className={`w-[60%] h-[2.5rem] rounded-lg bg=[#2b072a] ${styles.button2}`} onClick={whatsappOrder}>
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#c01fbb] xs:w-[95%] text-white ${styles.button2}`} onClick={whatsappOrder}>
           Order On Whatsapp
         </button>
-        <button className={`w-[60%] h-[2.5rem] rounded-lg bg=[#a03cae] ${styles.button3}`} onClick={combineDispatches}>
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#2b072a] xs:w-[95%] text-white ${styles.button3}`} onClick={combineDispatches}>
           Back To Marketplace
         </button>
       </div>

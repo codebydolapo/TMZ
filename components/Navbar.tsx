@@ -19,24 +19,29 @@ function Navbar() {
     <div className={`w-[100vw] bg-black h-[4rem] flex items-center justify-between fixed z-[5] top-0`}>
       <Link href="/">
         <div className={`h-[50px] w-[50%] flex items-center justify-start`}>
-          <img src={"/icons/purpleIcon.jpg"} className={`w-[2.5rem] h-[2.5rem] rounded-full mx-3`} alt="" />
-          <p className = {`text-4xl text-white`}>
+          <img src={"/icons/purpleIcon.jpg"} className={`md:w-[2.5rem] md:h-[2.5rem] rounded-full md:mx-2 xs:w-[2rem] xs:h-[2rem] xs:mx-[5px]`} alt="" />
+          <p className={`md:text-4xl text-white xs:text-2xl`}>
             <strong>Purple</strong>Collections
           </p>
         </div>
       </Link>
-      <div className={`h-full w-[30%] flex justify-center items-center`}>
+      <div className={`h-full md:w-[30%] flex justify-center items-center xs:w-[40%]`}>
         <div
-          className={`w-full h-full flex items-center justify-around px-3 cursor-pointer`}
+          className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
           onChange={(e) => e.preventDefault()}
           onClick={combineDispatches}
         >
-          <p className = {`text-white text-2xl`}>
-            Cart: <span>{counter}</span>
-          </p>
-          <p className = {`text-white text-2xl`}>
-            Total: <span>#{amount}</span>
-          </p>
+          <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
+            <p className={`text-white md:text-xl xs:text-sm`}>
+              Cart: <span>{counter}</span>
+            </p>
+          </div>
+          <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
+            <p className={`text-white md:text-xl xs:text-sm`}>
+              Total: <span>{Math.ceil(amount)/100}</span>
+            </p>
+            <img src = "/icons/ether.png" className = {`md:w-[2rem] md:h-[2rem] xs:w-[1.5rem] xs:h-[1.5rem]`}/>
+          </div>
         </div>
       </div>
     </div>

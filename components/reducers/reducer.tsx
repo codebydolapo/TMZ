@@ -32,6 +32,8 @@ const hamburgerState = (state = false, action: {type: string})=>{
         return state + 1;
       case "DECREMENT_PRODUCT_COUNT":
         return state - 1;
+      case "CLEAR_PRODUCT_COUNT":
+        return state = 0
       default:
         return state;
     }
@@ -46,6 +48,8 @@ const hamburgerState = (state = false, action: {type: string})=>{
         return state + action.amount;
       case "DECREMENT_PRODUCT_AMOUNT":
         return state - action.amount;
+      case "CLEAR_TOTAL":
+        return state =  0
       default:
         return state;
     }
@@ -95,7 +99,9 @@ const hamburgerState = (state = false, action: {type: string})=>{
           alert(`Cannot remove product with id: ${action.item.id}: Not in cart!`);
         }
         return newCart;
-  
+        
+        case "SCRUB-CART":
+          return state = []
       default:
         return state;
     }
@@ -128,36 +134,6 @@ const hamburgerState = (state = false, action: {type: string})=>{
         return state;
     }
   };
-  
-  export const passwordState = (
-    state = true,
-    action: { type: string; password: number }
-  ) => {
-    switch (action.type) {
-      case "REVEAL_PASSWORD_PANEL":
-        return (state = true);
-      case "REMOVE_PASSWORD_PANEL":
-        if(action.password === 1234){
-          return (state = false);
-        }
-      default:
-        return state;
-    }
-  };
-  
-  export const dashboardState = (
-    state = false,
-    action: { type: string; dashboardFlag: boolean }
-  ) => {
-    switch (action.type) {
-      case "REVEAL_DASHBOARD":
-        return (state = true);
-      case "REMOVE_DASHBOARD":
-        return (state = false);
-      default:
-        return state;
-    }
-  };
 
 
 
@@ -170,7 +146,4 @@ export const allReducers = combineReducers({
     checkoutItems,
     container,
     checkout,
-    passwordState,
-    dashboardState
-    
 })

@@ -25,26 +25,30 @@ function Product({ image, price, title, availability, description, id }: Props) 
   const dispatch = useDispatch();
 
   function combinedDispatches() {
-    dispatch(incrementProductCount());
-    dispatch(incrementProductAmount(price ? price : 0));
-    dispatch(
-      addCheckoutItem({
-        image,
-        price,
-        id,
-        title,
-        description: truncateString(description, 35),
-        availability
-      })
-    );
+    if(availability){
+      dispatch(incrementProductCount());
+      dispatch(incrementProductAmount(price ? price * 100 : 0));
+      dispatch(
+        addCheckoutItem({
+          image,
+          price,
+          id,
+          title,
+          description: truncateString(description, 35),
+          availability
+        })
+      );
+    } else{
+      alert("Item Unavailable")
+    }
   }
 
   return (
-    <div className={`max-w-[15.5rem] min-w-[15.5rem] max-h-[25rem] min-h-[25rem] rounded-lg mx-2 my-2 flex flex-col justify-between items-center cursor-pointer ${styles.productMain}`} onClick={combinedDispatches}>
+    <div className={`md:max-w-[15.5rem] md:min-w-[15.5rem] md:max-h-[25rem] md:min-h-[25rem] rounded-lg mx-auto my-4 flex flex-col justify-between items-center cursor-pointer xs:max-w-[45vw] xs:min-w-[45vw] xs:max-h-[90vw] xs:min-h-[90vw] ${styles.productMain}`} onClick={combinedDispatches}>
       <img
         src={image ? image : "/images/imageError.webp"}
         alt=""
-        className={`w-full max-h-[15.5rem] min-h-[15.5rem] rounded-[inherit] rounded-b-none `}
+        className={`w-full md:max-h-[15.5rem] md:min-h-[15.5rem] rounded-[inherit] rounded-b-none xs:max-h-[45vw] xs:min-h-[45vw]`}
       />
       <div className={`w-full min-h-[10rem] max-h-[10rem] flex flex-col justify-between items-center p-2 `}>
         <div className={`w-full max-h-[5rem] min-h-[5rem] overflow-hidden text-wrap `}>

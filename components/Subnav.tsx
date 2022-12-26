@@ -49,7 +49,7 @@ function Subnav({
   }, []);
 
   return (
-    <div className={`w-[100vw] min-h-[12rem] flex flex-row justify-between items-center overflow-x-scroll px-3`}>
+    <div className={`w-[100vw] min-h-[12rem] flex flex-row justify-between items-center overflow-x-scroll md:px-3`}>
       <CategoryImage
         image={"/images/bestselling.jpg"}
         title={"Best-Selling"}

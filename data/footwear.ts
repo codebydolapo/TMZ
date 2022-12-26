@@ -52,7 +52,7 @@ export const footwear: Props[] = [
         name: "footwear6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear6.jpg",
-        price: "0.014",
+        price: "0.04",
         index: 1,
         availability: true
     },
@@ -60,7 +60,7 @@ export const footwear: Props[] = [
         name: "footwear7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear7.jpg",
-        price: "0.011",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -68,7 +68,7 @@ export const footwear: Props[] = [
         name: "footwear8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear8.jpg",
-        price: "0.032",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -76,7 +76,7 @@ export const footwear: Props[] = [
         name: "footwear9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear9.jpg",
-        price: "0.34",
+        price: "0.3",
         index: 1,
         availability: true
     },
@@ -84,7 +84,7 @@ export const footwear: Props[] = [
         name: "footwear10",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear10.jpg",
-        price: "0.023",
+        price: "0.03",
         index: 1,
         availability: false
     },
@@ -92,7 +92,7 @@ export const footwear: Props[] = [
         name: "footwear11",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear11.jpg",
-        price: "0.023",
+        price: "0.03",
         index: 1,
         availability: true
     },
@@ -140,7 +140,7 @@ export const footwear: Props[] = [
         name: "footwear6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear6.jpg",
-        price: "0.014",
+        price: "0.04",
         index: 1,
         availability: true
     },
@@ -148,7 +148,7 @@ export const footwear: Props[] = [
         name: "footwear7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear7.jpg",
-        price: "0.011",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -156,7 +156,7 @@ export const footwear: Props[] = [
         name: "footwear8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear8.jpg",
-        price: "0.032",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -164,7 +164,7 @@ export const footwear: Props[] = [
         name: "footwear9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear9.jpg",
-        price: "0.34",
+        price: "0.3",
         index: 1,
         availability: true
     },
@@ -172,7 +172,7 @@ export const footwear: Props[] = [
         name: "footwear10",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear10.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -180,7 +180,7 @@ export const footwear: Props[] = [
         name: "footwear11",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear11.jpg",
-        price: "0.023",
+        price: "0.03",
         index: 1,
         availability: true
     },
@@ -228,7 +228,7 @@ export const footwear: Props[] = [
         name: "footwear6",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear6.jpg",
-        price: "0.014",
+        price: "0.04",
         index: 1,
         availability: true
     },
@@ -236,7 +236,7 @@ export const footwear: Props[] = [
         name: "footwear7",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear7.jpg",
-        price: "0.011",
+        price: "0.01",
         index: 1,
         availability: true
     },
@@ -244,7 +244,7 @@ export const footwear: Props[] = [
         name: "footwear8",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear8.jpg",
-        price: "0.032",
+        price: "0.02",
         index: 1,
         availability: false
     },
@@ -252,7 +252,7 @@ export const footwear: Props[] = [
         name: "footwear9",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear9.jpg",
-        price: "0.34",
+        price: "0.3",
         index: 1,
         availability: true
     },
@@ -260,7 +260,7 @@ export const footwear: Props[] = [
         name: "footwear10",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear10.jpg",
-        price: "0.023",
+        price: "0.03",
         index: 1,
         availability: false
     },
@@ -268,7 +268,7 @@ export const footwear: Props[] = [
         name: "footwear11",
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
         image: "/images/footwear/footwear11.jpg",
-        price: "0.023",
+        price: "0.02",
         index: 1,
         availability: true
     },

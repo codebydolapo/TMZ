@@ -90,27 +90,21 @@ export const removeCheckout = ()=>{
     }
 }
 
-export const removePasswordPanel = (password: number)=>{
+export const clearCart = ()=>{
     return{
-        type: 'REMOVE_PASSWORD_PANEL',
-        password
+        type: 'CLEAR_PRODUCT_COUNT'
     }
 }
 
-export const revealPasswordPanel = ()=>{
-    return {
-      type: "REVEAL_PASSWORD_PANEL",
-    };
+export const clearTotal = ()=>{
+    return{
+        type: 'CLEAR_TOTAL'
+    }
 }
 
-export const removeDashboard = ()=>{
-    return {
-      type: "REMOVE_DASHBOARD",
-    };
+export const scrubCart = ()=>{
+    return{
+        type: 'SCRUB-CART'
+    }
 }
 
-export const revealDashboard = ()=>{
-    return {
-      type: "REVEAL_DASHBOARD",
-    };
-}
