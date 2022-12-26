@@ -2,41 +2,41 @@ import { expect } from "chai";
 import { ethers } from "hardhat";
 import { Contract, Signer } from "ethers";
 
-describe("Solaris", async function () {
+describe("Purple", async function () {
 
     function etherToWei(_etherAmount: any) {
         return ethers.utils.parseUnits(_etherAmount, "ether")
     }
-    let deployedSolaris: Contract
+    let deployedPurple: Contract
     let owner:any, customer: any
 
     before(async () => {
         [owner, customer] = await ethers.getSigners();
 
-        const Solaris = await ethers.getContractFactory("Solaris");
-        deployedSolaris = await Solaris.deploy(owner.address);
+        const Purple = await ethers.getContractFactory("Purple");
+        deployedPurple = await Purple.deploy(customer);
 
-        deployedSolaris.deployed()
+        deployedPurple.deployed()
     })
 
     it("Should accept payment", async function(){
-        expect(await deployedSolaris.connect(customer).acceptPayment({value: etherToWei("10")})).to.changeEtherBalances([deployedSolaris.address, customer.address], ["10", "-10"])
+        expect(await deployedPurple.connect(customer).acceptPayment({value: etherToWei("10")})).to.changeEtherBalances([deployedPurple.address, customer.address], ["10", "-10"])
     })
 
     it("fetches total earnings", async function(){
-        const totalCollected = await deployedSolaris.getTotalAmountReceived()
+        const totalCollected = await deployedPurple.getTotalAmountReceived()
         expect(totalCollected).to.equal(etherToWei("10"))
     })
 
     it("pays total earnings to owner", async function(){
-        const totalCollected = await deployedSolaris.getTotalAmountReceived()
-        const withdrawalReceipt = await deployedSolaris.connect(owner).withdraw(owner.address)
-        expect(withdrawalReceipt).to.changeEtherBalances([deployedSolaris.address, owner.address], [`-${totalCollected}`, totalCollected])
+        const totalCollected = await deployedPurple.getTotalAmountReceived()
+        const withdrawalReceipt = await deployedPurple.connect(owner).withdraw(owner.address)
+        expect(withdrawalReceipt).to.changeEtherBalances([deployedPurple.address, owner.address], [`-${totalCollected}`, totalCollected])
         // console.log(totalCollected.toString())
     })
 
     it("finds out how much an address paid", async function(){
-        expect(await deployedSolaris.getAmountReceived(customer.address)).to.equal(etherToWei("10"))
+        expect(await deployedPurple.getAmountReceived(customer.address)).to.equal(etherToWei("10"))
     })
 
 })

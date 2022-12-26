@@ -5,12 +5,12 @@ import fs from "fs"
 
 async function main() {
     const [owner, customer] = await ethers.getSigners();
-    const Solaris = await ethers.getContractFactory("Solaris");
-    const solaris = await Solaris.deploy(owner.address);
+    const Purple = await ethers.getContractFactory("Purple");
+    const purple = await Purple.deploy(owner.address);
 
-    await solaris.deployed();
+    await purple.deployed();
 
-    fs.writeFileSync("src/solarisAddress.js", `export const solarisAddress = "${solaris.address}"`)
+    fs.writeFileSync("src/purpleAddress.js", `export const purpleAddress = "${purple.address}"`)
 
 }
 

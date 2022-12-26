@@ -135,6 +135,24 @@ const hamburgerState = (state = false, action: {type: string})=>{
     }
   };
 
+  export const contract = (state: any = [], action: {type: string, contract: any[]})=>{
+    switch (action.type) {
+      case "SAVE_CONTRACT":
+        return state = action.contract
+      default:
+        return state;
+    }
+  }
+
+  export const account = (state: any = [], action: {type: string, account: any[]})=>{
+    switch (action.type) {
+      case "SAVE_ACCOUNT":
+        return state = action.account
+      default:
+        return state;
+    }
+  }
+
 
 
 export const allReducers = combineReducers({

@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { revealContainer, removeCheckout, clearCart, clearTotal, scrubCart } from "./reducers/action";
 import { link } from "fs";
 import { useState } from "react";
+import { ethers } from "ethers";
 
 interface CartItem {
   image: string;
@@ -34,21 +35,39 @@ function CheckoutTotal() {
   }
 
   //FUNCTION THAT COMPILES THE MESSAGE TO SEND ON WHATSAPP
-  function whatsappOrder(e: any) {
-    e.preventDefault();
-    const arrayOfNames: string[] = [];
+  // function whatsappOrder(e: any) {
+  //   e.preventDefault();
+  //   const arrayOfNames: string[] = [];
 
-    let combinedArrayOfNames = cart.map((item: CartItem) => {
-      return [...arrayOfNames, item.title];
-    });
-    let _combinedArrayOfNames = combinedArrayOfNames.join(", and a ");
-    let _sendMessage = `Hello Nasie! I would like to order a ${_combinedArrayOfNames}. My name is `;
+  //   let combinedArrayOfNames = cart.map((item: CartItem) => {
+  //     return [...arrayOfNames, item.title];
+  //   });
+  //   let _combinedArrayOfNames = combinedArrayOfNames.join(", and a ");
+  //   let _sendMessage = `Hello Nasie! I would like to order a ${_combinedArrayOfNames}. My name is `;
 
-    let sendMessage: string = _sendMessage.replace(/ /g, "%20");
-    setMessage(sendMessage);
-    console.log(message);
-    setLink(`https://wa.me/2348180593602?text=${message}`);
-    window.open(link, "_blank");
+  //   let sendMessage: string = _sendMessage.replace(/ /g, "%20");
+  //   setMessage(sendMessage);
+  //   console.log(message);
+  //   setLink(`https://wa.me/2348180593602?text=${message}`);
+  //   window.open(link, "_blank");
+  // }
+
+  const purple = useSelector((state: any)=>{
+    return state.contract
+  })
+
+  const account = useSelector((state: {account: string})=>{
+    return state.account
+  })
+
+  async function makePayment(){
+    if(account){
+      const transactionReceipt = await purple.acceptPayment({from: account, value: ethers.utils.parseUnits(amount, "ether")})
+      console.log(transactionReceipt)
+    }
+    else{
+      alert("Please connect your wallet!")
+    }
   }
 
   return (
@@ -58,13 +77,16 @@ function CheckoutTotal() {
         <img src="/icons/ether.png" className={`md:w-[3rem] md:h-[3rem] xs:w-[2.5rem] xs:h-[2.5rem]`} />
       </div>
       <div className={`h-[13rem] w-full flex flex-col items-center justify-around`}>
-        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#5f0e5c] xs:w-[95%] text-white ${styles.button1}`} onClick={clearBasket}>
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#e72ee4] xs:w-[95%] text-white ${styles.button1}`} onClick={clearBasket}>
           Clear Cart
         </button>
-        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#c01fbb] xs:w-[95%] text-white ${styles.button2}`} onClick={whatsappOrder}>
-          Order On Whatsapp
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#7e0c47] xs:w-[95%] text-white ${styles.button2}`} onClick={makePayment}>
+          Pay With Ether
         </button>
-        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#2b072a] xs:w-[95%] text-white ${styles.button3}`} onClick={combineDispatches}>
+        {/* <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#7e0c47] xs:w-[95%] text-white ${styles.button2}`} onClick={whatsappOrder}>
+          Order On Whatsapp
+        </button> */}
+        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#d90077] xs:w-[95%] text-white ${styles.button3}`} onClick={combineDispatches}>
           Back To Marketplace
         </button>
       </div>

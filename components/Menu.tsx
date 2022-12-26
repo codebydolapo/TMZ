@@ -3,7 +3,9 @@ import styles from "../styles/menu.module.css"
 import { ArrowLeftIcon } from "@heroicons/react/outline"
 import Link from "next/link"
 import { useDispatch, useSelector } from 'react-redux'
-import { activateHamburger, deactivateHamburger } from './reducers/action'
+import { activateHamburger, deactivateHamburger, saveAccount, saveContract } from './reducers/action'
+import { ethers } from "ethers"
+import { useState, useEffect, useMemo } from "react"
 
 function Menu() {
 
@@ -22,6 +24,13 @@ function Menu() {
             dispatch(deactivateHamburger())
         }
     }
+
+
+    const [connectSwitch, setconnectSwitch] = useState(false)
+    const [account, setAccount] = useState("")
+    // const [network, setNetwork] = useState("")
+
+
     return (
         <div className={hamburgerState ? styles.menu : styles.menuActive}>
             {hamburgerState && <>

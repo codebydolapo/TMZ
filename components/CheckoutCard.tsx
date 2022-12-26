@@ -23,7 +23,7 @@ function CheckoutCard({image, title, availability, description, price, id}: Prop
   function combinedDispatches(){
     dispatch(removeCheckoutItem({id}))
     dispatch(decrementProductCount())
-    dispatch(decrementProductAmount(price))
+    dispatch(decrementProductAmount(price * 100))
   }
 
   return (
@@ -42,7 +42,7 @@ function CheckoutCard({image, title, availability, description, price, id}: Prop
         </div>
         {availability && (
           <div className={`w-full h-[2.5rem] flex flex-col items-center justify-center`}>
-            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#8f329d] capitalize`}>available</p>
+            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#0e8a29] capitalize`}>available</p>
           </div>
         )}
         {!availability && (

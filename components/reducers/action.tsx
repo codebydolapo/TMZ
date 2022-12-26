@@ -108,3 +108,17 @@ export const scrubCart = ()=>{
     }
 }
 
+export const saveContract = (contract: any)=>{
+    return{
+        type: 'SAVE_CONTRACT',
+        contract
+    }
+}
+
+export const saveAccount = (account: any)=>{
+    return{
+        type: 'SAVE_ACCOUNT',
+        account
+    }
+}
+

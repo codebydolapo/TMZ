@@ -1,7 +1,7 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.7;
 
-contract Solaris {
+contract Purple {
     address public owner;
     mapping(address => uint256) private paymentRecords;
     uint256 private amountCollected;
