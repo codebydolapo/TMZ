@@ -1,9 +1,12 @@
 import styles from "../styles/checkouttotal.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { revealContainer, removeCheckout, clearCart, clearTotal, scrubCart } from "./reducers/action";
-import { link } from "fs";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import Link from "next/link";
+import { saveAccount } from "./reducers/action";
+
+
 
 interface CartItem {
   image: string;
@@ -30,8 +33,8 @@ function CheckoutTotal() {
     dispatch(clearCart())
     dispatch(clearTotal())
     dispatch(scrubCart())
-    dispatch(revealContainer());
-    dispatch(removeCheckout());
+    // dispatch(revealContainer());
+    // dispatch(removeCheckout());
   }
 
   //FUNCTION THAT COMPILES THE MESSAGE TO SEND ON WHATSAPP
@@ -52,20 +55,34 @@ function CheckoutTotal() {
   //   window.open(link, "_blank");
   // }
 
-  const purple = useSelector((state: any)=>{
+  useEffect(() => {
+    let Window: any = window
+      Window.ethereum.request({ method: "eth_requestAccounts" })
+        .then((accounts: any) => {
+          dispatch(saveAccount(accounts[0]))
+        })
+        .catch((err: any) => console.log(err))
+  }, [])
+
+
+
+  const purple = useSelector((state: any) => {
     return state.contract
   })
 
-  const account = useSelector((state: {account: string})=>{
+  const account = useSelector((state: { account: string }) => {
     return state.account
   })
 
-  async function makePayment(){
-    if(account){
-      const transactionReceipt = await purple.acceptPayment({from: account, value: ethers.utils.parseUnits(amount, "ether")})
+  console.log(account)
+
+
+  async function makePayment() {
+    if (account) {
+      const transactionReceipt = await purple.acceptPayment({ from: account, value: ethers.utils.parseUnits(amount.toString(), "ether") })
       console.log(transactionReceipt)
     }
-    else{
+    else {
       alert("Please connect your wallet!")
     }
   }
@@ -77,18 +94,22 @@ function CheckoutTotal() {
         <img src="/icons/ether.png" className={`md:w-[3rem] md:h-[3rem] xs:w-[2.5rem] xs:h-[2.5rem]`} />
       </div>
       <div className={`h-[13rem] w-full flex flex-col items-center justify-around`}>
-        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#e72ee4] xs:w-[95%] text-white ${styles.button1}`} onClick={clearBasket}>
-          Clear Cart
-        </button>
+        <Link href='/marketplace'>
+          <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#e72ee4] xs:w-[95%] text-white ${styles.button1}`} onClick={clearBasket}>
+            Clear Cart
+          </button>
+        </Link>
         <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#7e0c47] xs:w-[95%] text-white ${styles.button2}`} onClick={makePayment}>
           Pay With Ether
         </button>
         {/* <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#7e0c47] xs:w-[95%] text-white ${styles.button2}`} onClick={whatsappOrder}>
           Order On Whatsapp
         </button> */}
-        <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#d90077] xs:w-[95%] text-white ${styles.button3}`} onClick={combineDispatches}>
-          Back To Marketplace
-        </button>
+        <Link href="/marketplace">
+          <button className={`md:w-[98%] h-[3rem] rounded-lg bg-[#d90077] xs:w-[95%] text-white ${styles.button3}`} onClick={combineDispatches}>
+            Back To Marketplace
+          </button>
+        </Link>
       </div>
     </div>
   );

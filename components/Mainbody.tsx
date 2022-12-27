@@ -1,7 +1,7 @@
 import styles from "../styles/mainbody.module.css";
 import Subnav from "./Subnav";
 import ProductContainer from "./ProductContainer";
-import Checkout from "./Checkout";
+// import Checkout from "./Checkout";
 import { useSelector } from "react-redux";
 
 function Mainbody({
@@ -31,8 +31,8 @@ function Mainbody({
           gadgets={gadgets}
         />
       )}
-      {containerState && <ProductContainer />}
-      {checkoutState && <Checkout />}
+      <ProductContainer />
+      {/* {checkoutState && <Checkout />} */}
     </div>
   );
 }

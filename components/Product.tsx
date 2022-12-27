@@ -3,9 +3,11 @@ import { useDispatch } from "react-redux";
 import {
   incrementProductCount,
   incrementProductAmount,
-  addCheckoutItem
+  addCheckoutItem,
+  saveAccount
 } from "./reducers/action";
 //import PortableText from "react-portable-text";
+import { useSelector } from "react-redux";
 
 interface Props {
   image: string;
@@ -24,8 +26,11 @@ function Product({ image, price, title, availability, description, id }: Props) 
 
   const dispatch = useDispatch();
 
+  const account = useSelector((state: any)=>{return state.account})
+
+
   function combinedDispatches() {
-    if(availability){
+    if (availability) {
       dispatch(incrementProductCount());
       dispatch(incrementProductAmount(price ? price * 100 : 0));
       dispatch(
@@ -38,7 +43,15 @@ function Product({ image, price, title, availability, description, id }: Props) 
           availability
         })
       );
-    } else{
+      if(account !== ""){
+        let Window: any = window
+        Window.ethereum.request({ method: "eth_requestAccounts" })
+          .then((accounts: any) => {
+            dispatch(saveAccount(accounts[0]))
+          })
+          .catch((err: any) => console.log(err))
+      }
+    } else {
       alert("Item Unavailable")
     }
   }
@@ -70,7 +83,7 @@ function Product({ image, price, title, availability, description, id }: Props) 
         <div className={`w-full h-[2.5rem] flex items-center justify-center`}>
           <p className={`text-base font-bold`}>Price:&nbsp;</p>
           <p className={`text-base font-bold`}>{price ? price : + "0.000"}</p>
-          <img src = "/icons/ether.png" className = {`w-[1.5rem] h-[1.5rem]`}/>
+          <img src="/icons/ether.png" className={`w-[1.5rem] h-[1.5rem]`} />
         </div>
       </div>
     </div>

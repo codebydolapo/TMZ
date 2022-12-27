@@ -56,7 +56,7 @@ const hamburgerState = (state = false, action: {type: string})=>{
   };
   
   export const category = (state = [], action: { type: string; array: any }) => {
-    console.log(action.array)
+    // console.log(action.array)
     switch (action.type) {
       case "SWITCH_CATEGORY":
         return (state = action.array);
@@ -144,12 +144,13 @@ const hamburgerState = (state = false, action: {type: string})=>{
     }
   }
 
-  export const account = (state: any = [], action: {type: string, account: any[]})=>{
+  export const account = (state: any = "", action: {type: string, account: string})=>{
+    // console.log(action.account)
     switch (action.type) {
       case "SAVE_ACCOUNT":
         return state = action.account
       default:
-        return state;
+        return "";
     }
   }
 
@@ -164,4 +165,6 @@ export const allReducers = combineReducers({
     checkoutItems,
     container,
     checkout,
+    contract,
+    account
 })

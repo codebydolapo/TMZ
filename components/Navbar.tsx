@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { revealCheckout, removeContainer } from "./reducers/action";
 import Link from "next/link";
+import { useMemo } from "react";
 
 function Navbar() {
   const counter = useSelector((state: any | unknown) => state.productCounter);
@@ -25,25 +26,31 @@ function Navbar() {
           </p>
         </div>
       </Link>
-      <div className={`h-full md:w-[30%] flex justify-center items-center xs:w-[40%]`}>
-        <div
-          className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
-          onChange={(e) => e.preventDefault()}
-          onClick={combineDispatches}
-        >
-          <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-            <p className={`text-white md:text-xl xs:text-sm`}>
-              Cart: <span>{counter}</span>
-            </p>
-          </div>
-          <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-            <p className={`text-white md:text-xl xs:text-sm`}>
-              Total: <span>{Math.ceil(amount)/100}</span>
-            </p>
-            <img src = "/icons/ether.png" className = {`md:w-[2rem] md:h-[2rem] xs:w-[1.5rem] xs:h-[1.5rem]`}/>
+      <Link href="/checkout">
+
+        <div className={`h-full md:w-[30%] flex justify-center items-center xs:w-[40%]`}>
+          <div
+            className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
+          >
+            {/* <div
+            className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
+            onChange={(e) => e.preventDefault()}
+            onClick={combineDispatches}
+          > */}
+            <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
+              <p className={`text-white md:text-xl xs:text-sm`}>
+                Cart: <span>{counter}</span>
+              </p>
+            </div>
+            <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
+              <p className={`text-white md:text-xl xs:text-sm`}>
+                Total: <span>{Math.ceil(amount) / 100}</span>
+              </p>
+              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.5rem] xs:h-[1.5rem]`} />
+            </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
