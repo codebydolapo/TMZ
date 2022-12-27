@@ -4,6 +4,7 @@ import { useDispatch } from "react-redux";
 import { revealCheckout, removeContainer } from "./reducers/action";
 import Link from "next/link";
 import { useMemo } from "react";
+import { ShoppingCartIcon, CashIcon } from "@heroicons/react/outline";
 
 function Navbar() {
   const counter = useSelector((state: any | unknown) => state.productCounter);
@@ -38,15 +39,17 @@ function Navbar() {
             onClick={combineDispatches}
           > */}
             <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-              <p className={`text-white md:text-xl xs:text-sm`}>
-                Cart: <span>{counter}</span>
-              </p>
+              <div className={`text-white md:text-xl xs:text-sm flex items-center justify-center`}>
+                <ShoppingCartIcon className = {`md:w-[2.5rem] xs:w-[1.8rem] stroke-[1px]`}/>
+                <span>: {counter}</span>
+              </div>
             </div>
             <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-              <p className={`text-white md:text-xl xs:text-sm`}>
-                Total: <span>{Math.ceil(amount) / 100}</span>
-              </p>
-              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.5rem] xs:h-[1.5rem]`} />
+              <div className={`text-white md:text-xl xs:text-sm flex items-center justify-center`}>
+              <CashIcon className = {`md:w-[2.5rem] xs:w-[1.8rem] stroke-[1px]`}/>
+                 <span>: {Math.ceil(amount) / 100}</span>
+              </div>
+              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.3rem] xs:h-[1.3rem]`} />
             </div>
           </div>
         </div>

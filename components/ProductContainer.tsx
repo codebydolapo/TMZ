@@ -107,11 +107,11 @@ function ProductContainer() {
         })}
       </div>
       {_account ?
-        <div className={`w-[20rem] md:h-[60px] bg-[#1266e4] rounded-xl xs:h-[45px] flex justify-center items-around cursor-pointer fixed bottom-[5rem] left-[5rem] hover:scale-[110%] ease-in-out duration-[500ms]`} onClick={connectMetamask}>
+        <div className={`md:w-[20rem] md:h-[60px] bg-[#1266e4] rounded-xl xs:h-[45px] flex justify-center items-around cursor-pointer fixed md:bottom-[5rem] md:left-[5rem] hover:scale-[110%] ease-in-out duration-[500ms] xs:bottom-[1rem] xs:left-[1rem] xs:w-[15rem]`} onClick={connectMetamask}>
           <h1 className={`text-white md:text-xl xs:text-sm flex justify-center items-center`}>{`${_account.slice(0, 6)}...${_account.slice(38, 42)}`}</h1>
         </div>
         :
-        <div className={`w-[20rem] md:h-[60px] bg-[#1266e4] rounded-xl xs:h-[45px] flex justify-center items-around cursor-pointer fixed bottom-[5rem] left-[5rem] hover:scale-[110%] ease-in-out duration-[500ms]`} onClick={connectMetamask}>
+        <div className={`md:w-[20rem] md:h-[60px] bg-[#1266e4] rounded-xl xs:h-[45px] flex justify-center items-around cursor-pointer fixed md:bottom-[5rem] md:left-[5rem] hover:scale-[110%] ease-in-out duration-[500ms] xs:bottom-[1rem] xs:left-[1rem] xs:w-[15rem]`} onClick={connectMetamask}>
           <h1 className={`text-white md:text-xl xs:text-sm flex justify-center items-center`}>Connect Wallet</h1>
         </div>
       }
