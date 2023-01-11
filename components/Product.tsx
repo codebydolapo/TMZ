@@ -43,14 +43,14 @@ function Product({ image, price, title, availability, description, id }: Props) 
           availability
         })
       );
-      if(account !== ""){
-        let Window: any = window
-        Window.ethereum.request({ method: "eth_requestAccounts" })
-          .then((accounts: any) => {
-            dispatch(saveAccount(accounts[0]))
-          })
-          .catch((err: any) => console.log(err))
-      }
+      // if(account !== ""){
+      //   let Window: any = window
+      //   Window.ethereum.request({ method: "eth_requestAccounts" })
+      //     .then((accounts: any) => {
+      //       dispatch(saveAccount(accounts[0]))
+      //     })
+      //     .catch((err: any) => console.log(err))
+      // }
     } else {
       alert("Item Unavailable")
     }
