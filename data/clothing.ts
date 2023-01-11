@@ -88,4 +88,44 @@ export const clothing: Props[] = [
         index: 1,
         availability: false
     },
-]
+    {
+        name: "clothing1",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
+        image: "/images/clothing/clothing1.jpeg",
+        price: "0.01",
+        index: 1,
+        availability: true
+    },
+    {
+        name: "clothing2",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
+        image: "/images/clothing/clothing2.jpg",
+        price: "0.02",
+        index: 1,
+        availability: true
+    },
+    {
+        name: "clothing3",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
+        image: "/images/clothing/clothing3.jpg",
+        price: "0.04",
+        index: 1,
+        availability: true
+    },
+    {
+        name: "clothing4",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
+        image: "/images/clothing/clothing4.jpg",
+        price: "0.01",
+        index: 1,
+        availability: true
+    },
+    {
+        name: "clothing5",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt nihil neque voluptatum doloribus, quas voluptate consequatur. Officia soluta aspernatur sequi, dolore ipsam odio eos, quod modi atque culpa sed nesciunt.",
+        image: "/images/clothing/clothing5.jpg",
+        price: "0.04",
+        index: 1,
+        availability: true
+    },
+ ]

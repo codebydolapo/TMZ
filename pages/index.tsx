@@ -2,18 +2,8 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Login from "../components/Login";
 import styles from "../styles/index.module.css";
-// import { purpleAddress } from '../src/purpleAddress'
-// import purpleABI from '../artifacts/contracts/Purple.sol/Purple.json'
-// import { saveContract, saveAccount } from '../components/reducers/action'
-// import { useState, useEffect, useMemo } from "react";
-// import { useDispatch, useSelector } from "react-redux";
-// import { ethers } from "ethers";
-
-
 
 const Landing: any | NextPage = () => {
-
-
 
   // const [connectSwitch, setconnectSwitch] = useState(false)
   // const [account, setAccount] = useState("")

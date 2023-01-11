@@ -49,7 +49,8 @@ function Navbar() {
               <CashIcon className = {`md:w-[2.5rem] xs:w-[1.8rem] stroke-[1px]`}/>
                  <span>: {Math.ceil(amount) / 100}</span>
               </div>
-              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.3rem] xs:h-[1.3rem]`} />
+              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[0rem] xs:h-[0rem]`} />
+              {/* <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.3rem] xs:h-[1.3rem]`} /> */}
             </div>
           </div>
         </div>

@@ -69,16 +69,16 @@ function ProductContainer() {
     setconnectSwitch(false)
   }, [connectSwitch])
 
-  useEffect(()=>{
-    let Window: any = window
-    Window.ethereum.request({ method: "eth_requestAccounts" })
-        .then((accounts: any) => {
-          setAccount(accounts[0])
-          dispatch(saveAccount(accounts[0]))
-          console.log(accounts[0])
-        })
-        .catch((err: any) => console.log(err))
-  }, [])
+  // useEffect(()=>{
+  //   let Window: any = window
+  //   Window.ethereum.request({ method: "eth_requestAccounts" })
+  //       .then((accounts: any) => {
+  //         setAccount(accounts[0])
+  //         dispatch(saveAccount(accounts[0]))
+  //         console.log(accounts[0])
+  //       })
+  //       .catch((err: any) => console.log(err))
+  // }, [])
 
 
 
