@@ -13,7 +13,7 @@ function Login() {
         <button className={`w-[13rem] h-[45px] bg-[#000] text-white color-white rounded-lg my-[20px] cursor-pointer ${styles.loginButton}`}>Proceed To Shop</button>
       </Link>
       <p className={`text-base text-white text-center md:w-[40rem] xs:w-[95vw]`}>
-        By signing-in you agree to Purple's Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
+        By signing-in you agree to Purple&apos;s Conditions of Use & Sale. Please see our Privacy Notice, our Cookies Notice and our Interest-Based Ads Notice.
       </p>
     </div>
   );
