@@ -1,63 +1,25 @@
-import styles from '../styles/checkoutcard.module.css'
-import {useDispatch} from 'react-redux'
-import {removeCheckoutItem, decrementProductAmount, decrementProductCount} from './reducers/action'
-
-
-interface Props {
-  image: string;
-  price: number;
-  title: string;
-  availability: boolean;
-  description: string;
-  id: number;
-}
-
-function CheckoutCard({image, title, availability, description, price, id}: Props){
-  //makes sure the text doesn't overflow and cause problems
-  function truncateString(text: string, n: number) {
-    return text?.length > n ? text.substr(0, n - 1) + "..." : text;
-  }
-
-  const dispatch = useDispatch()
-
-  function combinedDispatches(){
-    dispatch(removeCheckoutItem({id}))
-    dispatch(decrementProductCount())
-    dispatch(decrementProductAmount(price * 100))
-  }
-
-  return (
-    <div className={`md:max-w-[15.5rem] md:min-w-[15.5rem] md:max-h-[25rem] md:min-h-[25rem] rounded-lg mx-auto my-4 flex flex-col justify-between items-center cursor-pointer xs:max-w-[45vw] xs:min-w-[45vw] xs:max-h-[90vw] xs:min-h-[90vw] ${styles.productMain}`} onClick = {combinedDispatches}>
-      <img
-        src={image ? image : "/images/imageError.webp"}
-        alt=""
-        className={`w-full md:max-h-[15.5rem] md:min-h-[15.5rem] rounded-[inherit] rounded-b-none xs:max-h-[45vw] xs:min-h-[45vw]`}
-      />
-      <div className={`w-full min-h-[10rem] max-h-[10rem] flex flex-col justify-between items-center p-2 `}>
-        <div className={`w-full max-h-[5rem] min-h-[5rem] overflow-hidden text-wrap`}>
-          <p className={`text-base capitalize font-bold my-1`}>
-            {title ? truncateString(title, 20) : "No-Name"}
-          </p>
-          <p className={`text-xs overflow-hidden`}>{truncateString(description, 35)}</p>
-        </div>
-        {availability && (
-          <div className={`w-full h-[2.5rem] flex flex-col items-center justify-center`}>
-            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#0e8a29] capitalize`}>available</p>
-          </div>
-        )}
-        {!availability && (
-          <div className={`w-full h-[2.5rem] flex flex-col items-center justify-center`}>
-            <p className={`text-xs w-[90%] h-full text-center rounded-[5px] flex items-center justify-center text-white bg-[#fd0d0d] capitalize`}>unavailable</p>
-          </div>
-        )}
-        <div className={`w-full h-[2.5rem] flex items-center justify-center`}>
-          <p className={`text-base font-bold`}>Price:&nbsp;</p>
-          <p className={`text-base font-bold`}>{price ? price : + "0.000"}</p>
-          <img src = "/icons/ether.png" className = {`w-[1.5rem] h-[1.5rem]`}/>
-        </div>
-      </div>
-    </div>
-  );
+function CheckoutCard(){
+    return(
+        <div className={`w-full min-h-[6rem] flex flex-col`}>
+                    <div className={`w-full h-[6rem] flex items-center justify-between border-2 border-grey`}>
+                        <div className={`h-full w-[6rem] flex items-center justify-center`}>
+                            <img src={`/images/gadgets/bose.jpg`} className={`w-[5rem] h-[5rem]`} alt='' />
+                        </div>
+                        <div className={`h-full w-1/2 flex items-center justify-start`}>
+                            <h1 className={`font-normal text-xl`}>Bose SoundLink Micro- Small Portable Bluetooth Speaker</h1>
+                        </div>
+                        <div className={`h-full w-[10rem] flex items-center justify-start`}>
+                            <h1 className={`font-normal text-xl`}>1Pc (17,000)</h1>
+                        </div>
+                        <div className={`h-full w-[10rem] flex items-center justify-start`}>
+                            <h1 className={`font-normal text-xl`}>#17,000</h1>
+                        </div>
+                        <div className={`h-full w-[5rem] flex items-center justify-start`}>
+                            {/* <XIcon className={`stroke-[1px] h-[25px] cursor-pointer`}/> */}
+                        </div>
+                    </div>
+                </div>
+    )
 }
 
 export default CheckoutCard

@@ -18,7 +18,7 @@ export const decrementProductCount = ()=>{
     }
 }
 
-export const incrementProductAmount = (amount: number)=>{
+export const incrementTotalAmount = (amount: number)=>{
     return {
         type: 'INCREMENT_PRODUCT_AMOUNT',
         amount: amount
@@ -108,17 +108,24 @@ export const scrubCart = ()=>{
     }
 }
 
-export const saveContract = (contract: any)=>{
+export const addAllProductData = (data: any)=>{
     return{
-        type: 'SAVE_CONTRACT',
-        contract
+        type: 'ADD_All_PRODUCT_DATA',
+        data
     }
 }
 
-export const saveAccount = (account: any)=>{
+export const addTelevisionsProductData = (data: any)=>{
     return{
-        type: 'SAVE_ACCOUNT',
-        account
+        type: 'ADD_TELEVISIONS_PRODUCT_DATA',
+        data
+    }
+}
+
+export const expandProductView = (data: any)=>{
+    return{
+        type: 'EXPAND_PRODUCT_VIEW',
+        data
     }
 }
 

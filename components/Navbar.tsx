@@ -1,62 +1,53 @@
-// import styles from "../styles/navbar.module.css";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
-import { revealCheckout, removeContainer } from "./reducers/action";
+import { ShoppingCartIcon, SearchIcon } from "@heroicons/react/outline";
 import Link from "next/link";
-import { useMemo } from "react";
-import { ShoppingCartIcon, CashIcon } from "@heroicons/react/outline";
+import businessName from '../utils/businessName'
+
 
 function Navbar() {
-  const counter = useSelector((state: any | unknown) => state.productCounter);
-  const amount = useSelector((state: any | unknown) => state.productAmount);
 
-  const dispatch = useDispatch();
-
-  function combineDispatches() {
-    dispatch(revealCheckout());
-    dispatch(removeContainer());
-  }
-
-  return (
-    <div className={`w-[100vw] bg-black h-[4rem] flex items-center justify-between fixed z-[5] top-0`}>
-      <Link href="/">
-        <div className={`h-[50px] w-[50%] flex items-center justify-start`}>
-          <img src={"/icons/purpleIcon.jpg"} className={`md:w-[2.5rem] md:h-[2.5rem] rounded-full md:mx-2 xs:w-[2rem] xs:h-[2rem] xs:mx-[5px]`} alt="" />
-          <p className={`md:text-4xl text-white xs:text-2xl`}>
-            <strong>Purple</strong>Collections
-          </p>
-        </div>
-      </Link>
-      <Link href="/checkout">
-
-        <div className={`h-full md:w-[30%] flex justify-center items-center xs:w-[40%]`}>
-          <div
-            className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
-          >
-            {/* <div
-            className={`w-full h-full flex md:flex-row md:items-center justify-around md:px-3 cursor-pointer xs:flex-col xs:items-end  `}
-            onChange={(e) => e.preventDefault()}
-            onClick={combineDispatches}
-          > */}
-            <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-              <div className={`text-white md:text-xl xs:text-sm flex items-center justify-center`}>
-                <ShoppingCartIcon className = {`md:w-[2.5rem] xs:w-[1.8rem] stroke-[1px]`}/>
-                <span>: {counter}</span>
-              </div>
+    const total = 17000
+    return (
+        <div className={`h-[3.5rem] w-full flex items-center md:justify-center my-2 xs:justify-between`}>
+            <div className={`md:w-[25%] h-full flex items-center justify-center xs:w-[50%]`}>
+                <img src='/icons/logo.jpg' alt='' className={`w-[40px] h-[40px] rounded-full mx-2`} />
+                <h1 className={`font-bold text-4xl text-[#041e42]`}>{businessName}</h1>
             </div>
-            <div className={`h-full md:w-[50%] flex items-center md:justify-center xs:w-[100%] xs:justify-end`}>
-              <div className={`text-white md:text-xl xs:text-sm flex items-center justify-center`}>
-              <CashIcon className = {`md:w-[2.5rem] xs:w-[1.8rem] stroke-[1px]`}/>
-                 <span>: {Math.ceil(amount) / 100}</span>
-              </div>
-              <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[0rem] xs:h-[0rem]`} />
-              {/* <img src="/icons/ether.png" className={`md:w-[2rem] md:h-[2rem] xs:w-[1.3rem] xs:h-[1.3rem]`} /> */}
+            <div className={`md:w-[50%] h-full flex items-center justify-around border-[#0000002d] md:border-[1px] rounded-lg xs:w-[0rem]`}>
+                {/* <div className={`w-[15%] h-full flex items-center justify-center`}>
+                    <h1 className={`font-bold text-base text-[#00000098]`}>All</h1>
+                </div>
+                <div className={`w-[70%] h-full border-[#0000002d] border-[1px] flex`}>
+                    <div className={`w-[15%] h-full flex items-center justify-center`}>
+                        <SearchIcon className={`stroke-[1px] text-[#00000071] h-[35px]`} />
+                    </div>
+                    <input type='text' className={`w-[85%] h-full border-0 outline-0 border-black`} placeholder='Search for your favourite product' />
+                </div>
+                <div className={`w-[15%] h-full border-[#0000002d] border-[1px] bg-[#041e42] flex items-center justify-center rounded-r-lg`}>
+                    <h1 className={`font-bold text-base text-white`}>Search</h1>
+                </div> */}
             </div>
-          </div>
+            <div className={`md:w-[25%] h-full flex items-center justify-end md:px-3 xs:w-[50%]`}>
+                <Link href='/checkout'>
+                    <div className={`w-[3rem] h-full mx-2 flex items-center justify-center relative cursor-pointer `}>
+                        <ShoppingCartIcon className={`stroke-[1px] h-[35px] `} />
+                        <div className={`absolute w-[1.1rem] h-[1.1rem] bg-[#ffbd27] rounded-full top-0 right-0 flex items-center justify-center`}>
+                            <h1 className={`text-black text-sm font-bold`}>4</h1>
+                        </div>
+                    </div>
+                </Link>
+                <Link href='/checkout'>
+                    <div className={`md:w-[7rem] h-full md:mx-2 flex flex-col items-center md:justify-center cursor-pointer xs:justify-end xs:w-[5rem]`}>
+                        <div className={`h-[50%] w-full flex items-center md:justify-start md:px-0 xs:justify-end xs:px-2`}>
+                            <h1 className={`text-sm text-[#000000de]`}>Total</h1>
+                        </div>
+                        <div className={`h-[50%] w-full flex items-center md:justify-start md:px-0 xs:justify-end xs:px-2`}>
+                            <h1 className={` font-bold text-lg text-[#000000de]`}>#{total.toLocaleString("en-US")}</h1>
+                        </div>
+                    </div>
+                </Link>
+            </div>
         </div>
-      </Link>
-    </div>
-  );
+    )
 }
 
-export default Navbar;
+export default Navbar
